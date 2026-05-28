@@ -17,3 +17,6 @@ logs/
 mysql-data/
 redis-data/
 backend-logs/
+
+# Archive files
+*.zip

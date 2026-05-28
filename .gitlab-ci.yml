@@ -1,0 +1,20 @@
+# GitLab CI/CD Pipeline for Cryptocurrency Address System
+
+stages:
+  - build
+  - test
+
+backend-build:
+  stage: build
+  image: maven:3.8-openjdk-17
+  script:
+    - cd backend
+    - mvn clean compile
+
+frontend-build:
+  stage: build
+  image: node:18-alpine
+  script:
+    - cd frontend
+    - npm install
+    - npm run build -- --production

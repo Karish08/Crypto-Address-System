@@ -1,3 +1,4 @@
+-- Schema for Cryptocurrency Address System
 -- Create database
 CREATE DATABASE IF NOT EXISTS crypto_address_system;
 USE crypto_address_system;
