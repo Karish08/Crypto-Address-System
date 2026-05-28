@@ -18,14 +18,14 @@ import Settings from './pages/Settings';
 import Reports from './pages/Reports';
 
 function App() {
-  const { token } = useSelector((state) => state.auth);
+  const { accessToken } = useSelector((state) => state.auth);
 
   return (
     <Router>
       <ToastContainer position="top-right" autoClose={3000} />
       <Routes>
-        <Route path="/login" element={token ? <Navigate to="/dashboard" /> : <Login />} />
-        <Route path="/register" element={token ? <Navigate to="/dashboard" /> : <Register />} />
+        <Route path="/login" element={accessToken ? <Navigate to="/dashboard" /> : <Login />} />
+        <Route path="/register" element={accessToken ? <Navigate to="/dashboard" /> : <Register />} />
         
         <Route path="/" element={<PrivateRoute><Layout /></PrivateRoute>}>
           <Route index element={<Navigate to="/dashboard" />} />

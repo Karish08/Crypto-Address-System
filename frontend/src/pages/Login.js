@@ -105,7 +105,7 @@ const Login = () => {
               <div className="mt-4 p-3 bg-light rounded">
                 <small className="text-muted d-block mb-2">Demo Credentials:</small>
                 <small className="d-block">Username: demo_user</small>
-                <small className="d-block">Password: password</small>
+                <small className="d-block">Password: demo123</small>
               </div>
             </Card.Body>
           </Card>
